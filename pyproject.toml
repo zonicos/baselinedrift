@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zonicos-baselinedrift"
+version = "0.1.0"
+description = "沿版本链比对基线配置，标出哪一次变更导致了分数变化"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "zonicos" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://zonicos.github.io"
+Repository = "https://github.com/zonicos/baselinedrift"
+Issues = "https://github.com/zonicos/baselinedrift/issues"
+
+[project.scripts]
+baselinedrift = "baselinedrift:main"
+
+[tool.setuptools]
+py-modules = ["baselinedrift"]
